@@ -87,12 +87,15 @@ homeassistant:
 ```
 
 3. Create a new project in the [developer console](https://console.actions.google.com/).
-	1. Add/Import project
+	1. Add/Import project (name the project and select a region)
 	2. Go to Build under the Actions SDK box
 	3. Copy the command that looks like:
 	`gactions update --action_package PACKAGE_NAME --project doctest-2d0b8`
-4. Replace `PACKAGE_NAME` with `project.json` and run that command from the same directory you saved `project.json` in (you'll need to put `./` before `gactions` so that it reads `./gactions`). It should output a URL like `https://console.actions.google.com/project/doctest-2d0b8/overview` - go there.
-5. You'll need to fill out most of the information on that page, but none of it really matters since you won't be addressing the App directly, only through the Smart Home functionality built into Google Assistant.
+4. Replace `PACKAGE_NAME` with `project.json` and run that command from the same directory you saved `project.json` in (you'll need to put `./` before `gactions` so that it reads `./gactions`). Visit the first URL to authenticate with your google account and generate an authorisation code in your browser, then enter this authorisation code to output a URL like `https://console.actions.google.com/project/doctest-2d0b8/overview` - go there.
+5. You'll need to fill out most of the information on that page, but none of it really matters since you won't be addressing the App directly, only through the Smart Home functionality built into Google Assistant. 
+You can use these images if you need something:
+Banner: https://home-assistant.io/images/cast/splash.png
+Logo: https://home-assistant.io/demo/favicon-192x192.png
 6. The final item on that page `Account linking` is required for your app to interact with Home Assistant.
 	1. Grant type: `Implicit`
 	2. Client ID: Should be the same as `client_id` from your hass config above
